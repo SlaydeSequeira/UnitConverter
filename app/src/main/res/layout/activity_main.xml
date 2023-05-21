@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Unit Converter App"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What would you like to convert"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Spinner
+        android:id="@+id/dropdown_menu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:entries="@array/options"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter amount"
+        android:id="@+id/text"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Amount"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The amount in      is       "
+        android:id="@+id/text2"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="convert"
+        android:layout_marginLeft="150dp"
+        />
+
+</LinearLayout>
