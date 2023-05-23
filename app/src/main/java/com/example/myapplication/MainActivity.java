@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().hide();
         MyPagerAdapter pagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         pagerAdapter.addFragment(new PeopleFragment(), "Ppl");
         pagerAdapter.addFragment(new JobFragment(), "Job");
@@ -51,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.baseline_people_24);
+        tabLayout.getTabAt(0).setIcon(R.drawable.baseline_groups_24);
+        tabLayout.getTabAt(1).setIcon(R.drawable.baseline_work_24);
+        tabLayout.getTabAt(2).setIcon(R.drawable.baseline_storefront_24);
+
     }
 }
 
