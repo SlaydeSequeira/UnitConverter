@@ -3,64 +3,75 @@ package com.example.myapplication.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapplication.R;
+import com.example.myapplication.adapter.RecyclerAdapter3;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link JobFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class JobFragment extends Fragment {
+    RecyclerView recyclerView;
+    RecyclerAdapter3 adapter;
+    String Image[] = {
+            "https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+            "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/1462980/pexels-photo-1462980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/15597151/pexels-photo-15597151/free-photo-of-profile-of-a-bearded-man.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/1370750/pexels-photo-1370750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    };
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    String tx1[] = {
+            "Chinmay Shah",
+            "Ravi Acharya",
+            "Romi Gupta",
+            "Nishi Dalal",
+            "Nitin Singh",
+            "Akhil Gadwal"
+    };
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    String tx2[] = {
+            "Mumbai",
+            "Mumbai",
+            "Mumbai",
+            "Mumbai",
+            "Mumbai",
+            "Mumbai"
+    };
 
-    public JobFragment() {
-        // Required empty public constructor
-    }
+    String tx3[] = {
+            "1.1km",
+            "400-500m",
+            "1.3km",
+            "1.7km",
+            "600-700m",
+            "1.4km"
+    };
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment JobFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static JobFragment newInstance(String param1, String param2) {
-        JobFragment fragment = new JobFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    String tx4[] = {
+            "Graphics Designer",
+            "Student",
+            "Android Dev",
+            "Software Dev",
+            "Software Dev",
+            "Software Dev"
+    };
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    int prog[] = {70, 30, 90, 60, 20, 80};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_job, container, false);
+        View view= inflater.inflate(R.layout.fragment_job, container, false);
+        recyclerView=view.findViewById(R.id.recycle2);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        adapter = new RecyclerAdapter3(getActivity(), Image,tx1,tx2,tx3,tx4,prog);
+        recyclerView.setAdapter(adapter);
+        return view;
     }
 }
