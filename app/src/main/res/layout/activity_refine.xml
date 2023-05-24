@@ -1,9 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Refine">
+    tools:context=".Refine"
+    android:background="@color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewStatus0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Select Your Availability"
+        android:textColor="#102F50"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+
+        />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewStatus0"
+        android:layout_margin="10dp"
+
+        android:entries="@array/status_options" />
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add your status"
+        android:textColor="#102F50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/spinner"
+        />
+
+    <EditText
+        android:id="@+id/editTextStatus"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/textViewStatus"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cir"
+        android:hint="Hi Community! I am open to new Connections"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextStatus"
+        android:layout_marginTop="16dp"
+        android:text="Select hyper local distance"
+        android:textColor="#102F50"
+        android:textStyle="bold"
+
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDistance"
+        android:id="@+id/something"
+        >
+
+        <SeekBar
+            android:id="@+id/seekBarDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            android:progress="0"
+            android:backgroundTint="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/textViewStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0km"
+            android:textColor="#102F50"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/textViewEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100km"
+            android:layout_marginTop="20dp"
+            android:textColor="#102F50"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/buttonSaveExplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/something"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/circular"
+        android:text="Save and Explore"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/text"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Purpose"
+        android:textColor="#102F50"
+        android:textSize="16sp"
+        android:layout_below="@id/something"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp" />
+    <RadioButton
+        android:id="@+id/radioButtonOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Coffee"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/text"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/radioButtonOption1"
+        android:layout_marginTop="16dp"
+        android:text="Buisness"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/text"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/radioButtonOption2"
+        android:layout_marginTop="16dp"
+        android:text="Hobbies"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/text"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/radioButtonOption3"
+        android:layout_marginTop="16dp"
+        android:text="Friendship"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/text"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Movies"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/radioButtonOption1"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/radioButtonOption1"
+        android:layout_marginTop="16dp"
+        android:text="Dining"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/radioButtonOption1"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/radioButtonOption6"
+        android:layout_marginTop="16dp"
+        android:text="Dating"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/radioButtonOption1"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+    <RadioButton
+        android:id="@+id/radioButtonOption8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/radioButtonOption7"
+        android:layout_marginTop="16dp"
+        android:text="Matrimony"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_radio_button"
+        android:textColor="#000000"
+        android:layout_below="@+id/radioButtonOption1"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        />
+</RelativeLayout>
