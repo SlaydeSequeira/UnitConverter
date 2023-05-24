@@ -26,7 +26,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/textViewStatus0"
         android:layout_margin="10dp"
-
+        android:textColor="@color/black"
         android:entries="@array/status_options" />
     <TextView
         android:id="@+id/textViewStatus"
@@ -51,8 +51,10 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
         android:background="@drawable/cir"
         android:hint="Hi Community! I am open to new Connections"
+        android:textSize="16dp"
         android:padding="8dp" />
 
     <TextView
@@ -72,8 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewDistance"
-        android:id="@+id/something"
-        >
+        android:id="@+id/something">
 
         <SeekBar
             android:id="@+id/seekBarDistance"
@@ -83,10 +84,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:max="100"
-            android:progress="0"
             android:backgroundTint="@color/black"
-            />
+            android:contentDescription="0km"
+            android:max="100"
+            android:progress="0" />
 
         <TextView
             android:id="@+id/textViewStart"
@@ -118,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/something"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="190dp"
         android:background="@drawable/circular"
         android:text="Save and Explore"
         android:textColor="#FFFFFF"
@@ -148,7 +149,7 @@
         android:layout_below="@+id/text"
         android:textSize="18sp"
         android:padding="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="5dp"
         />
     <RadioButton
         android:id="@+id/radioButtonOption2"
@@ -163,7 +164,7 @@
         android:layout_below="@+id/text"
         android:textSize="18sp"
         android:padding="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="5dp"
         />
     <RadioButton
         android:id="@+id/radioButtonOption3"
@@ -178,7 +179,7 @@
         android:layout_below="@+id/text"
         android:textSize="18sp"
         android:padding="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="5dp"
         />
     <RadioButton
         android:id="@+id/radioButtonOption4"
@@ -193,7 +194,7 @@
         android:layout_below="@+id/text"
         android:textSize="18sp"
         android:padding="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="5dp"
         />
     <RadioButton
         android:id="@+id/radioButtonOption5"
@@ -222,7 +223,7 @@
         android:layout_below="@+id/radioButtonOption1"
         android:textSize="18sp"
         android:padding="10dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         />
     <RadioButton
         android:id="@+id/radioButtonOption7"
